@@ -8,7 +8,7 @@ CREATE DATABASE warehouse13;
 USE warehouse13;
 
 CREATE TABLE department(
-	id INT AUTO_INCREMENT NOT NULL,
+   id INT AUTO_INCREMENT NOT NULL,
     name VARCHAR(20),
     PRIMARY KEY(id)
 );
@@ -17,12 +17,12 @@ INSERT INTO department
 VALUE ('Computers'),('Sweets'),('Beauty'),('Managment');
 
 CREATE TABLE suppliers(
-	id INT AUTO_INCREMENT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     organization_name VARCHAR(20),
     site VARCHAR(25),
     contact_person VARCHAR(50),
     phone VARCHAR(15),
-	email VARCHAR(50),
+    email VARCHAR(50),
     city VARCHAR(15),
     department_id INT,
     FOREIGN KEY(department_id) REFERENCES department(id),
